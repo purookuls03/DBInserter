@@ -68,7 +68,7 @@ int insert(int book_id,char *book_name,char *author_name,char *genre,int book_pr
     int rc;
     char *zErrMsg;
     char sql[1024] ;
-    sprintf(sql,"INSERT INTO student (book_id,book_name,author_name,genre,book_price) VALUES ( %d , '%s' , '%s' , '%s' , %d);",book_id,book_name,author_name,genre,book_price);
+    sprintf(sql,"INSERT INTO Library (book_id,book_name,author_name,genre,book_price) VALUES ( %d , '%s' , '%s' , '%s' , %d);",book_id,book_name,author_name,genre,book_price);
     printf("Query to be executed: [%s]",sql);
     rc = sqlite3_exec(database, sql, callback, 0, &zErrMsg);
     if( rc != SQLITE_OK ) 
@@ -94,7 +94,7 @@ int select()
     char *zErrMsg;
     const char* data = "select function called";
    
-    char *sql = "SELECT * from COMPANY;";
+    char *sql = "SELECT * from Library;";
    
     rc = sqlite3_exec(database, sql, callback, (void*)data, &zErrMsg);
     if( rc != SQLITE_OK ) 
