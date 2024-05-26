@@ -1,0 +1,2 @@
+1. This utility will take input of csv file. This will have 3 columns(RolNumber,Name,age)
+2. This utility will write these records into Database table student

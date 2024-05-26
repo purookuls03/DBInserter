@@ -1,0 +1,41 @@
+High level Design
+===================
+1. Line by Line, Read the Csv file--> Read the text in Csv, Example of line is given below
+ i.e 1,Puroo,20
+ 
+2. Need to parse the above record and put into a variable of below structre
+
+structure
+{
+int rollnumber;
+char Name[25];
+int age;
+}
+Roll nUmber=1
+Name =Puroo
+Age: 20
+
+3. Need to connect sqllite DB from C program
+
+4. prepare insert command and execute it;
+
+Low level Design
+=====================
+1. Line by Line, Read the Csv file--> Read the text in Csv, Example of line is given below
+		a.Need to make file read function separate.
+2. Need to parse the above record and put into a variable of below structre(strtok)
+
+
+3. sqllite libary(Code in binary form) + API (Add(2,4)
+
+(Exe(API) --> LIbrary)
+
+4. Create separate file for each .h , source file and data base connect file
+ source:
+ main.c 
+ csv_reader.c
+ database_connect.c
+ 
+ include:
+ csv_reader.h
+ database_connect.h
